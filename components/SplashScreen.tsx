@@ -35,7 +35,7 @@ export function SplashScreen() {
     >
       <div className="relative flex items-center justify-center">
         <Image
-          src="/images/logo.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/logo.png`}
           alt=""
           width={200}
           height={60}

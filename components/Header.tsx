@@ -12,7 +12,7 @@ const navActive = "font-semibold underline";
 export function Logo({ light = false }: { light?: boolean }) {
   return (
     <Image
-      src="/images/logo.png"
+      src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/logo.png`}
       alt={`${site.shortName} logotyp`}
       width={240}
       height={72}

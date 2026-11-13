@@ -35,7 +35,7 @@ const pexels = (
   brief: string,
   tone: PhotoTone = "light",
 ): Photo => ({
-  src: `/images/${file}`,
+  src: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/${file}`,
   alt,
   brief,
   tone,
