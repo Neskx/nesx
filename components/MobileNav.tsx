@@ -38,7 +38,7 @@ export function MobileNav() {
         id="mobilmeny"
         aria-label="Mobilmeny"
         hidden={!open}
-        className="absolute inset-x-0 top-full max-h-[calc(100dvh-4.5rem-5.5rem)] overflow-y-auto overscroll-contain whitespace-normal border-b border-line bg-canvas shadow-lg lg:max-h-[calc(100dvh-4.5rem)]"
+        className="absolute inset-x-0 top-full max-h-[calc(100dvh-6rem-5.5rem)] overflow-y-auto overscroll-contain whitespace-normal border-b border-line bg-canvas shadow-lg lg:max-h-[calc(100dvh-6rem)]"
       >
         <ul className="container-page divide-y divide-line py-2">
           <Suspense fallback={<NavLinks linkClassName={mobileLink} activeClassName={mobileActive} onNavigate={() => setOpen(false)} />}>

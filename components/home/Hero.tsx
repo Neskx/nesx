@@ -10,8 +10,7 @@ export function Hero() {
     <section>
       <div className="container-page grid items-center gap-10 py-12 lg:grid-cols-2 lg:gap-16 lg:py-24">
         <div>
-          <p className="eyebrow">Målare i Eslöv · sedan {site.founded}</p>
-          <h1 className="mt-5 text-[clamp(1.7rem,8.4vw,3rem)] leading-[1.08]">
+          <h1 className="text-[clamp(2.2rem,9.5vw,3.75rem)] font-bold leading-[1.08]">
             {headline.map((line) => (
               <span key={line} className="block whitespace-nowrap">
                 {line}

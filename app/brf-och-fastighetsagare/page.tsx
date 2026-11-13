@@ -39,7 +39,6 @@ export default function BrfPage() {
       <JsonLd data={breadcrumbSchema(trail)} />
       <PageHero
         trail={trail}
-        eyebrow="BRF & fastighetsägare"
         title="Vi underhåller din fastighet"
         lead="Måleri och fastighetsservice i samma händer. En fast kontakt som känner huset, kommer när det är sagt och håller ordning på underhållet över tid."
       >
@@ -55,7 +54,7 @@ export default function BrfPage() {
 
       <section aria-labelledby="varfor" className="section container-page grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
-          <SectionHeading id="varfor" eyebrow="Varför oss" title="En målare som återkommer" />
+          <SectionHeading id="varfor" title="En målare som återkommer" />
           <div className="mt-5 space-y-4 text-lg text-muted">
             <p>
               För en förening eller fastighetsägare är det sällan det stora projektet som är problemet. Det är allt det
@@ -84,14 +83,12 @@ export default function BrfPage() {
         <div className="section container-page">
           <SectionHeading
             id="avtal"
-            eyebrow="Underhållsavtal"
             title="Återkommande målning och underhåll"
             lead="Ett underhållsavtal sprider kostnaderna över tid och håller fastigheten i jämnt, gott skick. Omfattningen anpassas efter fastigheten – inga färdiga paket."
           />
           <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {agreement.map((step, index) => (
+            {agreement.map((step) => (
               <li key={step.title} className="border-t border-line pt-4">
-                <span className="text-sm font-semibold text-muted">{String(index + 1).padStart(2, "0")}</span>
                 <h3 className="mt-2 text-xl">{step.title}</h3>
                 <p className="mt-2 text-[0.95rem] text-muted">{step.text}</p>
               </li>
@@ -101,7 +98,7 @@ export default function BrfPage() {
       </section>
 
       <section aria-labelledby="omfattning" className="section container-page">
-        <SectionHeading id="omfattning" eyebrow="Fastighetsservice" title="Det här kan ingå" />
+        <SectionHeading id="omfattning" title="Det här kan ingå" />
         <ul className="mt-8 grid gap-x-10 gap-y-3 sm:grid-cols-2">
           {scope.map((item) => (
             <li key={item} className="flex gap-3 border-b border-line pb-3">

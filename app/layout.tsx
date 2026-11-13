@@ -4,6 +4,7 @@ import { MobileCallBar } from "@/components/ContactTab";
 import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { SplashScreen } from "@/components/SplashScreen";
 import { JsonLd } from "@/components/ui";
 import { businessSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <MobileCallBar />
         <CookieBanner />
+        <SplashScreen />
         <JsonLd data={businessSchema()} />
       </body>
     </html>

@@ -31,48 +31,7 @@ export type Project = {
   placeholder?: boolean;
 };
 
-export const projects: Project[] = [
-  {
-    id: "exempel-1",
-    title: "Exempel: Invändig målning av villa",
-    place: "Ort",
-    category: "invandigt",
-    summary: "Beskriv uppdraget kort: vilka rum, vilket underarbete, vilka kulörer och hur lång tid det tog.",
-    photo: "ref-1",
-    quote: null,
-    placeholder: true,
-  },
-  {
-    id: "exempel-2",
-    title: "Exempel: Fasadmålning av trävilla",
-    place: "Ort",
-    category: "fasad",
-    summary: "Beskriv fasadens skick före, vilket färgsystem som valdes och varför.",
-    photo: "ref-2",
-    quote: null,
-    placeholder: true,
-  },
-  {
-    id: "exempel-3",
-    title: "Exempel: Renovering av spröjsade fönster",
-    place: "Ort",
-    category: "fonster",
-    summary: "Beskriv antal fönster, vad som gjordes (skrapning, kittning, linoljefärg) och resultatet.",
-    photo: "ref-3",
-    quote: null,
-    placeholder: true,
-  },
-  {
-    id: "exempel-4",
-    title: "Exempel: Trapphus åt bostadsrättsförening",
-    place: "Ort",
-    category: "brf",
-    summary: "Beskriv omfattningen, hur arbetet planerades med de boende och eventuellt underhållsavtal.",
-    photo: "ref-4",
-    quote: null,
-    placeholder: true,
-  },
-];
+export const projects: Project[] = [];
 
 export type BeforeAfter = {
   id: string;

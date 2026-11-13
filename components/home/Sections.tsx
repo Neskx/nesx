@@ -35,7 +35,7 @@ export function TrustBadges() {
 export function ServiceTiles() {
   return (
     <section aria-labelledby="tjanster-rubrik" className="section container-page">
-      <SectionHeading id="tjanster-rubrik" eyebrow="Tjänster" title="Måleri och underhåll" />
+      <SectionHeading id="tjanster-rubrik" title="Måleri och underhåll" />
       <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
         {services.map((service, index) => (
           <li key={service.slug} className={index < 2 ? "lg:col-span-3" : "lg:col-span-2"}>

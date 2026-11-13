@@ -22,7 +22,7 @@ export default function HomePage() {
 
       {comparison && (
         <section aria-labelledby="fore-efter-rubrik" className="section container-page">
-          <SectionHeading id="fore-efter-rubrik" eyebrow="Före & efter" title="Dra i reglaget och se skillnaden" />
+          <SectionHeading id="fore-efter-rubrik" title="Dra i reglaget och se skillnaden" />
           <div className="mt-8">
             <BeforeAfterShowcase item={comparison} />
           </div>
@@ -31,7 +31,7 @@ export default function HomePage() {
 
       <section aria-labelledby="rot-rubrik" className="bg-subtle">
         <div className="section container-page">
-          <SectionHeading id="rot-rubrik" eyebrow="ROT-avdrag" title="Vad kostar jobbet efter ROT?" />
+          <SectionHeading id="rot-rubrik" title="Vad kostar jobbet efter ROT?" />
           <div className="mt-8">
             <RotCalculator />
           </div>

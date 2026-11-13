@@ -48,7 +48,6 @@ export const headline = ["Vi känner kunden", "kunden känner bäst"] as const;
 export const nav = [
   { href: "/tjanster", label: "Tjänster" },
   { href: "/brf-och-fastighetsagare", label: "BRF & fastighetsägare" },
-  { href: "/referenser", label: "Referenser" },
   { href: "/malarguide", label: "Målarguide" },
   { href: "/om-jocke", label: "Om Jocke" },
   { href: "/kontakt", label: "Kontakt" },

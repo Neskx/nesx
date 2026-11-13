@@ -14,9 +14,9 @@ export function Logo({ light = false }: { light?: boolean }) {
     <Image
       src="/images/logo.png"
       alt={`${site.shortName} logotyp`}
-      width={160}
-      height={48}
-      className={`h-10 w-auto ${light ? "brightness-0 invert" : ""}`}
+      width={240}
+      height={72}
+      className={`h-[6.07rem] w-auto ${light ? "brightness-0 invert" : ""}`}
       preload
     />
   );
@@ -25,7 +25,7 @@ export function Logo({ light = false }: { light?: boolean }) {
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-canvas/95 backdrop-blur-sm">
-      <div className="container-page relative flex h-[4.5rem] items-center justify-between gap-4 whitespace-nowrap">
+      <div className="container-page relative flex h-[6rem] items-center py-0.5 justify-between gap-4 whitespace-nowrap">
         <Link href="/" aria-label={`JN ${site.shortName} – till startsidan`} className="flex min-h-11 items-center rounded">
           <Logo />
         </Link>

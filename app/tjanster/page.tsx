@@ -22,7 +22,6 @@ export default function ServicesPage() {
       <JsonLd data={breadcrumbSchema(trail)} />
       <PageHero
         trail={trail}
-        eyebrow="Tjänster"
         title="Måleri och underhåll – inne som ute"
         lead="Fem områden, en målare. Varje jobb börjar med ett kostnadsfritt hembesök och slutar med att vi går igenom resultatet tillsammans."
       />

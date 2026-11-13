@@ -32,12 +32,7 @@ export function PhotoSlot({ id, className = "", sizes = "(min-width: 1024px) 50v
   return (
     <div className={`relative overflow-hidden ${photo.src ? "bg-subtle" : `photo-texture ${tones[photo.tone]}`} ${className}`}>
       {photo.src ? (
-        <>
         <Image src={photo.src} alt={photo.alt} fill sizes={sizes} preload={priority} className="object-cover" style={{ objectPosition: photo.focus }} />
-        {"stock" in photo && photo.stock && (
-          <span className="absolute bottom-2 right-2 rounded-sm bg-ink/70 px-2 py-0.5 text-xs font-medium text-white">Genrebild</span>
-        )}
-        </>
       ) : (
         site.showOwnerNotes && !hideNote && (
           <div className={`absolute inset-0 flex flex-col items-center gap-2 p-5 text-center ${noteAtTop ? "justify-start pt-8" : "justify-center"}`}>

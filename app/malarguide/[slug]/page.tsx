@@ -68,7 +68,7 @@ export default async function GuidePage({ params }: PageProps<"/malarguide/[slug
       <JsonLd data={breadcrumbSchema(trail)} />
 
       <article>
-        <PageHero trail={trail} eyebrow="Målarguide" title={guide.title} lead={guide.description}>
+        <PageHero trail={trail} title={guide.title} lead={guide.description}>
           <p className="mt-6 text-sm text-muted">
             Av {site.owner}, målare · Uppdaterad <time dateTime={guide.updated}>{dateFormat.format(new Date(guide.updated))}</time> ·{" "}
             {guide.readMinutes} min läsning

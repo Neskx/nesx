@@ -26,7 +26,6 @@ export default function AboutPage() {
       <JsonLd data={breadcrumbSchema(trail)} />
       <PageHero
         trail={trail}
-        eyebrow={`Om ${site.shortName}`}
         title="En målare, ett ansvar"
         lead={`${site.name} är ${site.owner}. Ett enmansföretag i Eslöv som sedan ${site.founded} målar hem och underhåller fastigheter i Mellanskåne.`}
       />
@@ -34,7 +33,7 @@ export default function AboutPage() {
       <section aria-labelledby="historia" className="section container-page grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <PhotoSlot id="owner" className="reveal aspect-[4/5] rounded-md" sizes="(min-width: 1024px) 40vw, 100vw" priority />
         <div>
-          <SectionHeading id="historia" eyebrow="Historien" title="Från Eslöv, för Eslöv med omnejd" />
+          <SectionHeading id="historia" title="Från Eslöv, för Eslöv med omnejd" />
           <div className="mt-5 space-y-4 text-lg text-muted">
             <p>
               {site.shortName} startades {site.founded} med en enkel tanke: att den som lovar jobbet också ska vara den
@@ -51,12 +50,7 @@ export default function AboutPage() {
               fastigheter som behöver någon som återkommer år efter år.
             </p>
           </div>
-          {site.showOwnerNotes && (
-            <p className="mt-6 rounded-md border-2 border-dashed border-edge p-4 text-sm text-muted">
-              <strong className="text-accent">Anteckning till ägaren:</strong> komplettera gärna med din egen bakgrund –
-              utbildning, år i yrket och vad som fick dig att starta eget. Personliga detaljer bygger förtroende.
-            </p>
-          )}
+
         </div>
       </section>
 
@@ -64,7 +58,6 @@ export default function AboutPage() {
         <div>
           <SectionHeading
             id="hantverk"
-            eyebrow="Hantverket"
             title={
               <>
                 Ytor som håller
@@ -99,7 +92,6 @@ export default function AboutPage() {
           <div className="grid items-end gap-8 lg:grid-cols-2">
             <SectionHeading
               id="material"
-              eyebrow="Färg & material"
               title="Val som är bra för huset – och för miljön"
               lead="Du får alltid en rekommendation, men valet är ditt. Säg till om du har särskilda önskemål om märkning, innehåll eller fabrikat."
             />
@@ -117,7 +109,7 @@ export default function AboutPage() {
       </section>
 
       <section aria-labelledby="foretaget" className="section container-page">
-        <SectionHeading id="foretaget" eyebrow="Företaget" title="Fakta om bolaget" />
+        <SectionHeading id="foretaget" title="Fakta om bolaget" />
         <dl className="mt-8 grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
             ["Företagsnamn", site.name],

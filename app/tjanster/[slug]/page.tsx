@@ -41,7 +41,7 @@ export default async function ServicePage({ params }: PageProps<"/tjanster/[slug
       <JsonLd data={faqSchema(service.faq)} />
       <JsonLd data={breadcrumbSchema(trail)} />
 
-      <PageHero trail={trail} eyebrow="Tjänst" title={service.title} lead={service.lead}>
+      <PageHero trail={trail} title={service.title} lead={service.lead}>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <QuoteLink service={service.slug} className="btn btn-cta">
             Begär offert <Icon name="arrow" />

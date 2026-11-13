@@ -1,31 +1,9 @@
-import { site } from "@/lib/site";
+import { AreaMap } from "./home/ServiceArea";
 import { Icon } from "./Icon";
 import { QuoteForm } from "./QuoteForm";
+import { areas, site } from "@/lib/site";
 
-export function ContactDetails() {
-  return (
-    <address className="not-italic">
-      <ul className="space-y-1">
-        <li>
-          <a href={`tel:${site.phone.href}`} className="flex min-h-12 items-center gap-3 text-lg font-semibold text-cta hover:underline">
-            <Icon name="phone" />
-            <span>
-              <span className="sr-only">Ring </span>
-              {site.phone.display}
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href={`mailto:${site.email}`} className="flex min-h-12 items-center gap-3 text-lg font-semibold text-cta hover:underline">
-            <Icon name="mail" /> {site.email}
-          </a>
-        </li>
-      </ul>
-    </address>
-  );
-}
-
-/** Kontaktformulär direkt på sidan, med direktkontakt bredvid. */
+/** Kontaktformulär med företagsuppgifter och karta bredvid. */
 export function ContactSection({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" }) {
   const Heading = headingLevel;
 
@@ -39,8 +17,36 @@ export function ContactSection({ headingLevel = "h2" }: { headingLevel?: "h1" | 
           <p className="mt-4 text-lg text-muted">
             {site.responsePromise}. {site.pricePromise}.
           </p>
-          <div className="mt-6">
-            <ContactDetails />
+
+          <dl className="mt-8 divide-y divide-line border-y border-line text-[0.95rem]">
+            {([
+              ["Företag", site.name],
+              ["Kontaktperson", site.owner],
+              ["Organisationsnummer", site.orgNr],
+              ["Adress", `${site.address.street}, ${site.address.postalCode} ${site.address.city}`],
+              ["Skatt", "Godkänd för F-skatt, momsregistrerad"],
+            ] as const).map(([term, value]) => (
+              <div key={term} className="flex flex-col gap-1 py-3 sm:flex-row sm:gap-6">
+                <dt className="w-44 shrink-0 text-muted">{term}</dt>
+                <dd className="font-medium">{value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href={`tel:${site.phone.href}`} className="btn btn-primary">
+              <Icon name="phone" /> Ring {site.phone.display}
+            </a>
+            <a href={`mailto:${site.email}`} className="btn btn-outline">
+              <Icon name="mail" /> {site.email}
+            </a>
+          </div>
+
+          <div className="mt-8">
+            <AreaMap />
+            <p className="mt-3 text-sm text-muted">
+              Vi tar uppdrag i {areas.map((a) => a.name).join(", ")} och orterna däremellan.
+            </p>
           </div>
         </div>
         <QuoteForm />

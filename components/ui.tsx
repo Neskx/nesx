@@ -13,13 +13,11 @@ export function JsonLd({ data }: { data: object }) {
 }
 
 export function SectionHeading({
-  eyebrow,
   title,
   lead,
   center = false,
   id,
 }: {
-  eyebrow?: string;
   title: ReactNode;
   lead?: ReactNode;
   center?: boolean;
@@ -27,8 +25,7 @@ export function SectionHeading({
 }) {
   return (
     <div className={`max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
-      {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-      <h2 id={id} className="mt-3 text-3xl sm:text-[2.6rem]">
+      <h2 id={id} className="text-3xl sm:text-[2.6rem]">
         {title}
       </h2>
       {lead && <p className="mt-4 text-lg text-muted">{lead}</p>}
@@ -39,13 +36,11 @@ export function SectionHeading({
 export type Crumb = { name: string; path: string };
 
 export function PageHero({
-  eyebrow,
   title,
   lead,
   trail,
   children,
 }: {
-  eyebrow?: string;
   title: ReactNode;
   lead?: ReactNode;
   trail: Crumb[];
@@ -77,8 +72,7 @@ export function PageHero({
             ))}
           </ol>
         </nav>
-        {eyebrow && <p className="eyebrow mt-8">{eyebrow}</p>}
-        <h1 className={`max-w-3xl text-[2rem] min-[380px]:text-4xl sm:text-5xl ${eyebrow ? "mt-3" : "mt-8"}`}>{title}</h1>
+        <h1 className="mt-8 max-w-3xl text-[2rem] min-[380px]:text-4xl sm:text-5xl">{title}</h1>
         {lead && <p className="mt-5 max-w-2xl text-lg text-muted sm:text-xl">{lead}</p>}
         {children}
       </div>

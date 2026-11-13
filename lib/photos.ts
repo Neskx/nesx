@@ -25,13 +25,6 @@ export type Photo = {
   stock?: { photographer: string; url: string };
 };
 
-const slot = (brief: string, alt: string, tone: PhotoTone = "light"): Photo => ({
-  src: null,
-  alt,
-  brief,
-  tone,
-});
-
 /** Bildbanksfoto från Pexels. `brief` beskriver det egna foto som bör ersätta det. */
 const pexels = (
   file: string,
@@ -53,12 +46,12 @@ const pexels = (
 export const photos = {
   hero: pexels(
     "hero.jpg",
-    "Målare i keps och grå t-shirt sedd bakifrån rollar en vägg",
-    "45% 50%",
-    "Ksenia Chernaya",
-    "https://www.pexels.com/photo/man-painting-walls-in-new-apartment-5691597/",
+    "Hand som målar en vit vägg med roller",
+    "70% 50%",
+    "Polina Tankilevitch",
+    "https://www.pexels.com/photo/close-up-of-a-hand-painting-a-wall-with-a-roller-brush-during-renovation-5583116/",
     "Joakim i arbete – pensel eller roller i hand, arbetskläder, naturligt ljus. Stående format.",
-    "navy",
+    "light",
   ),
   owner: pexels(
     "owner.jpg",
@@ -142,14 +135,23 @@ export const photos = {
     "navy",
   ),
 
-  // Före/efter och referensprojekt ska visa RIKTIGA jobb. Lägg aldrig bildbanksfoton här.
-  "ba-invandig-fore": slot("FÖRE: rummet innan målning.", "Rum före målning", "light"),
-  "ba-invandig-efter": slot("EFTER: samma rum, samma vinkel.", "Samma rum efter målning", "grey"),
-
-  "ref-1": slot("Projektfoto 1.", "Färdigt måleriprojekt", "grey"),
-  "ref-2": slot("Projektfoto 2.", "Färdigt måleriprojekt", "slate"),
-  "ref-3": slot("Projektfoto 3.", "Färdigt måleriprojekt", "navy"),
-  "ref-4": slot("Projektfoto 4.", "Färdigt måleriprojekt", "light"),
+  "ba-invandig-fore": pexels(
+    "ba-fore.jpg",
+    "Rum under renovering med verktyg, kablar och färgburkar",
+    "50% 50%",
+    "La Miko",
+    "https://www.pexels.com/photo/a-room-undergoing-renovation-with-tools-supplies-wiring-and-paint-cans-3615721/",
+    "FÖRE: rummet innan målning.",
+  ),
+  "ba-invandig-efter": pexels(
+    "ba-efter.jpg",
+    "Ljust tomt rum med trägolv och solljus genom fönstret",
+    "50% 50%",
+    "Peter Vang",
+    "https://www.pexels.com/photo/spacious-empty-room-with-hardwood-floors-and-sunlight-35493905/",
+    "EFTER: samma rum, samma vinkel.",
+    "grey",
+  ),
 } satisfies Record<string, Photo>;
 
 export type PhotoId = keyof typeof photos;

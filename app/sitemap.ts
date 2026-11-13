@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/tjanster", 0.9),
     ...services.map((service) => page(`/tjanster/${service.slug}`, 0.9)),
     page("/brf-och-fastighetsagare", 0.8),
-    page("/referenser", 0.7),
     page("/malarguide", 0.7),
     ...guides.map((guide) => page(`/malarguide/${guide.slug}`, 0.6, guide.updated)),
     page("/om-jocke", 0.6),
