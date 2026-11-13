@@ -10,9 +10,6 @@ import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { getService } from "@/lib/services";
 import { site } from "@/lib/site";
 
-// Alla sidor förrenderas via generateStaticParams; okända adresser får vänta in en riktig 404.
-export const instant = false;
-
 export function generateStaticParams() {
   return guides.map((guide) => ({ slug: guide.slug }));
 }
