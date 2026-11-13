@@ -3,6 +3,8 @@ import { guides } from "@/lib/guides";
 import { services } from "@/lib/services";
 import { site } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const page = (path: string, priority: number, lastModified?: string) => ({
     url: `${site.url}${path}`,
