@@ -12,7 +12,7 @@ export function Hero() {
         <div>
           <h1 className="text-[clamp(2.2rem,9.5vw,3.75rem)] font-bold leading-[1.08]">
             {headline.map((line) => (
-              <span key={line} className="block whitespace-nowrap">
+              <span key={line} className="block lg:whitespace-nowrap">
                 {line}
               </span>
             ))}
